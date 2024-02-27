@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: contrast(90%);
+  }
+  
+  .recommendation-form {
+    max-width: 400px;
+    min-width: 300px;
+    filter: contrast(120%);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  }
+  
+  .recommendation-form label {
+    font-weight: bold; /* Make questions bold */
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .recommendation-form select,
+  .recommendation-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .listing {
+    @apply text-xl text-white;
+  }
+  .listing ol li, .listing p {
+    filter: contrast(150%);
+    filter: opacity(98%);
+    @apply text-white rounded bg-black p-4 text-xl shadow-md;
+  }
+
+
+
+  /* try {
+    const prompt = `Suggest me a list of 5 ${type} and my favorite ones are ${favorite} If i prefer the genre ${genre}. I am in a ${mood} mood`;
+    const response = await invokeModel({
+      modelId: 'amazon.titan-text-lite-v1',
+      contentType: 'application/json',
+      accept: 'application/json',
+      body: JSON.stringify({
+        inputText: prompt,
+        textGenerationConfig: {
+          maxTokenCount: 300,
+          stopSequences: [],
+          temperature: 0,
+          topP: 0.9,
+        },
+      }),
+    });
+
+    const responseBody = new TextDecoder().decode(response.body);
+    const data = JSON.parse(responseBody);
+    setListing(data.results[0].outputText); // Set the listing in state
+
+  } catch (error) {
+    console.error('Error:', error);
+  } */
